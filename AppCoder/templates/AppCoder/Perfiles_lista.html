@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h2>Perfiles</h2>
+{% endblock%}
+
+{% block contenidoQueCambia %}
+
+<h3>Perfiles</h3>
+
+{% for perfiles in object_list %}
+
+    <li>{{perfiles}}</li>
+    <button>
+        <a href="{% url 'Perfiles_detalles' perfiles.id %}">Detalle</a>     
+    </button>
+    <button>
+        <a href="{% url 'Perfiles_editar' perfiles.id %}">Editar</a>
+    </button>
+    <button>
+        <a href="{% url 'Perfiles_borrar' perfiles.id %}">Borrar</a>
+    </button>
+{% endfor %}
+
+<br>
+<br>
+
+{% endblock %}

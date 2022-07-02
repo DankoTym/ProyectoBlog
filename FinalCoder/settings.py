@@ -55,7 +55,7 @@ ROOT_URLCONF = 'FinalCoder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/TELCOM MPC/OneDrive/Documentos/curso python/visual studio code/nuevo/FinalCoder/AppCoder/templates/'],
+        'DIRS': ['C:/Users/TELCOM MPC/OneDrive/Documentos/curso python/visual studio code/FinalCoder/FinalCoder/AppCoder/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

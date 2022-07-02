@@ -1,0 +1,16 @@
+{% extends "AppCoder/padre.html" %}    
+{% load static %}
+
+{% block titulo %}
+<h2>Eliminar Perfil</h2>
+{% endblock%}
+
+{% block contenidoQueCambia %}
+
+<h3>Listado Perfiles</h3>
+
+<form method="POST">{% csrf_token %}
+    Estás seguro de eliminar a "{{object}}"
+    <input type="submit" value="SI"/><button><a href="{% url 'Perfiles_lista' %}">NO</a></button>
+</form>
+{% endblock %}

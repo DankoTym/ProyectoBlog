@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}    
+{% load static %}
+
+{% block Titulo %}
+<h2>Perfil</h2>
+{% endblock%}
+
+{% block contenidoQueCambia %}
+
+<h3>Editar</h3>
+
+<form method="POST">{% csrf_token %}
+    Editar 
+    {{form.as_p}}                              
+    <input type="submit" value="Enviar"/>
+</form>
+{% endblock %}
+
+

@@ -1,0 +1,18 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h2>Usuario</h2>
+{% endblock%}
+
+{% block contenidoQueCambia %}
+<h3>Editar {{usuario}}</h3>
+
+    <form action="{% url 'editarPerfil' %}" method="POST">{% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type="submit" value="Guardar">
+    </form>
+
+{% endblock %}

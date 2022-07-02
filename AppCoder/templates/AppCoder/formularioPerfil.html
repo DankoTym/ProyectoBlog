@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+
+<h2>Cargar Perfil</h2>
+
+{% endblock%}
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'FormularioPerfil' %}" method="POST">{% csrf_token %} 
+    <h3>Ingrese sus datos:</h3>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Ingresar">        
+</form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h2>Perfil</h2>
+{% endblock%}
+
+{% block contenidoQueCambia %}
+
+<h3>Datos Perfil: </h3>
+<p>NOMBRE: {{perfil.nombre}}</p>
+<p>PROFESION: {{perfil.profesion}}</p>
+<p>DESCRIPCION: {{perfil.descripcion}}</p>
+<p>EMAIL: {{perfil.email}}</p>
+
+<p>
+    <a href="{% url 'Perfiles_lista' %}">Volver a la lista de perfiles</a>  
+</p>
+
+{% endblock %}
