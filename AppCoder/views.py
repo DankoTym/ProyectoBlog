@@ -24,6 +24,11 @@ def Home(self):
     documento = plantilla.render()
     return HttpResponse(documento)
 
+def About(self):
+    plantilla = loader.get_template('AppCoder/about.html')   
+    documento = plantilla.render()
+    return HttpResponse(documento)
+
 #--------LOGIN---------------
 def login_request(request):
 
